@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    font-family: 'Space Mono', monospace;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Light-grayish-cyan);
+    font-size: 24px;
+}
+
+h2{
+    padding: 40px;
+    text-align: center;
+    color: var(--Dark-grayish-cyan);
+}
+
+.card-container{
+    width: 100%;
+    background-color: var(--White);
+    text-align: left;
+    padding: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.bill-sec label{
+    font-size: 1rem;
+    color: var(--Dark-grayish-cyan);
+}
+
+.bill-input{
+    position: relative;
+    padding-bottom: 1rem;
+    padding-top: 0.3rem;
+}
+
+.bill-input input::placeholder{
+    text-align: right;
+    padding-right: 1rem;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.bill-input input{
+    width: 100%;
+    border: none;
+    background-color: var(--Very-light-grayish-cyan);
+    padding: 1rem 0;
+}
+
+.bill-input img{
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+}
+
+.tip-sec label{
+    font-size: 1rem;
+    color: var(--Dark-grayish-cyan);
+}
+
+.tip-btns{
+    display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+}
+
+.tip-btns button{
+    width: 9rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-light-grayish-cyan);
+}
+
+.tip-btns button input{
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    border: none;
+    background-color: var(--Very-light-grayish-cyan);
+    text-align: center;
+}
+
+.people-sec label{
+    font-size: 1rem;
+    color: var(--Dark-grayish-cyan);
+}
+
+.people-input{
+    position: relative;
+}
+
+.people-input input{
+    width: 100%;
+    border: none;
+    background-color: var(--Very-light-grayish-cyan);
+    padding: 1rem 0;
+}
+
+.people-input input::placeholder{
+    text-align: right;
+    padding-right: 1rem;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.people-input img{
+    position: absolute;
+    left: 1rem;
+    top: 1.3rem;
+}
+
+.outputs-section{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 15px;
+    margin-top: 2rem;
+    font-size: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.tip-amount{
+    display: flex;
+    align-items: center;
+    color: var(--Very-light-grayish-cyan)
+}
+
+.tip-amount p{
+    width: 100%;
+}
+
+.tip-amount span{
+    color: var(--Grayish-cyan);
+}
+
+.tip-amount #tipAmount{
+    color: var(--Light-grayish-cyan);
+    font-size: 1.5rem;
+}
+
+.total{
+    display: flex;
+    align-items: center;
+    color: var(--Very-light-grayish-cyan)
+}
+
+.total p{
+    width: 100%;
+}
+
+.total span{
+    color: var(--Grayish-cyan);
+}
+
+.total #total{
+    color: var(--Light-grayish-cyan);
+    font-size: 1.5rem;
+}
+
+.reset-btn{
+    padding: 1rem 7rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: var(--Very-dark-cyan);
+    background-color: var(--Light-grayish-cyan);
+    border: none;
+}
+
+@media (min-width: 900px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-container{
+        max-width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .tip-btns{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 1rem;
+    }
+    .tip-btns button{
+        width: 5rem;
+        height: 3rem;
+        font-size: .7rem;
+    }
+    .tip-btns button input{
+        font-size: 1rem;
+    }
+    .outputs-section{
+        text-align: center;
+        margin-top: 0;
+    }
+    .tip-amount #tipAmount{
+        font-size: 1.5rem;
+    }
+    .reset-btn{
+        font-size: 1rem;
+    }
+}

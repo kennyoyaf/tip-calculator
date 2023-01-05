@@ -23,18 +23,19 @@
                 <div class="tip-sec">
                     <label for="tip">Select Tip %</label>
                     <div class="tip-btns">
-                            <button>5%</button>
-                            <button>10%</button>
-                            <button>15%</button>
-                            <button>20%</button>
-                            <button>25%</button>
-                            <button><input type="text" placeholder="Custom" id="custom"></button>
+                            <div class="second-tip">5%</div>
+                            <div class="second-tip">10%</div>
+                            <div class="second-tip btn-active">15%</div>
+                            <div class="second-tip">20%</div>
+                            <div class="second-tip">25%</div>
+                            <div class="second-tipbtn"><input type="text" placeholder="Custom" id="custom"></div>
                     </div>
                 </div>
                 <div class="people-sec">
                     <label for="people">Number of People</label>
+                    <span class="error-msg hide">Can't be zero</span>
                     <div class="people-input">
-                        <input type="text" placeholder="0" id="people">
+                        <input type="text" placeholder="0" class="people" id="people">
                         <img src="images/icon-person.svg" alt="icon-person">
                     </div>
                 </div>
@@ -48,7 +49,7 @@
                     <p>Total<br><span>/ person</span></p>
                     <h2 id="total">$0.00</h2>
                 </div>
-                <button class="reset-btn" id="resetBtn">RESET</button>
+                <div class="reset-btn" id="resetBtn">RESET</div>
             </div>
         </div>
     <script src="app.js"></script>

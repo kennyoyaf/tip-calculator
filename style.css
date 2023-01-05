@@ -52,7 +52,7 @@ h2{
 .bill-input input::placeholder{
     text-align: right;
     padding-right: 1rem;
-    color: var(--Very-dark-cyan);
+    color: var(--Grayish-cyan);
     font-weight: 700;
     font-size: 1.5rem;
 }
@@ -62,6 +62,11 @@ h2{
     border: none;
     background-color: var(--Very-light-grayish-cyan);
     padding: 1rem 0;
+    text-align: right;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-right: 1rem;
 }
 
 .bill-input img{
@@ -77,11 +82,26 @@ h2{
 
 .tip-btns{
     display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
 }
 
-.tip-btns button{
+.second-tip{
+    width: 9rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-light-grayish-cyan);
+}
+
+.second-tipbtn{
     width: 9rem;
     height: 3rem;
     border-radius: 5px;
@@ -92,7 +112,7 @@ h2{
     color: var(--Very-light-grayish-cyan);
 }
 
-.tip-btns button input{
+.second-tipbtn input{
     width: 100%;
     height: 100%;
     font-size: 1.5rem;
@@ -101,9 +121,24 @@ h2{
     text-align: center;
 }
 
+.btn-active{
+    color: var(--Very-dark-cyan);
+    background-color: var(--Light-grayish-cyan)
+}
+
+.error-msg{
+    font-size: 1rem;
+    color: hsl(354, 100%, 66%);
+}
+
+.hide{
+    display: none;
+}
+
 .people-sec label{
     font-size: 1rem;
     color: var(--Dark-grayish-cyan);
+    margin-right: 2rem;
 }
 
 .people-input{
@@ -115,12 +150,18 @@ h2{
     border: none;
     background-color: var(--Very-light-grayish-cyan);
     padding: 1rem 0;
+    border-radius: .5rem;
+    text-align: right;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-right: 1rem;
 }
 
 .people-input input::placeholder{
     text-align: right;
     padding-right: 1rem;
-    color: var(--Very-dark-cyan);
+    color: var(--Grayish-cyan);
     font-weight: 700;
     font-size: 1.5rem;
 }
@@ -187,17 +228,45 @@ h2{
     border: none;
 }
 
-@media (min-width: 900px){
+.btn-active:hover{
+    cursor: pointer;
+    background-color: var(--Light-grayish-cyan)
+}
+
+@media (min-width: 600px){
+    .tip-btns{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 1rem;
+    }
+    .outputs-section{
+        text-align: center;
+    }
+    .tip-amount #tipAmount{
+        font-size: 1.5rem;
+    }
+    .reset-btn{
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1200px){
     body{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        min-height: 150vh;
     }
     .card-container{
         max-width: 80%;
         display: flex;
         justify-content: space-between;
+        align-items: stretch;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-radius: 20px;
     }
     .tip-btns{
         display: grid;
@@ -206,7 +275,7 @@ h2{
         column-gap: 1rem;
     }
     .tip-btns button{
-        width: 5rem;
+        width: 3rem;
         height: 3rem;
         font-size: .7rem;
     }
@@ -214,13 +283,6 @@ h2{
         font-size: 1rem;
     }
     .outputs-section{
-        text-align: center;
         margin-top: 0;
-    }
-    .tip-amount #tipAmount{
-        font-size: 1.5rem;
-    }
-    .reset-btn{
-        font-size: 1rem;
     }
 }
